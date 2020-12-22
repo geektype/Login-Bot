@@ -1,7 +1,7 @@
 import json
 import csv
 creds = []
-with open("netflix.txt", 'r') as login_file:
+with open("spotify.txt", 'r') as login_file:
     lines = login_file.readlines()
     for line in lines:
         colon_pos = 0
@@ -15,7 +15,7 @@ with open("netflix.txt", 'r') as login_file:
         stripped_pass = passwd.split(" ", 1)[0]
         creds.append({'uname':usern,'passwd':stripped_pass})
 
-with open("netflix.csv", "w", newline='') as login_csv:
+with open("spotify.csv", "w", newline='') as login_csv:
     head = ['uname', 'passwd']
     writer = csv.DictWriter(login_csv, fieldnames=head)
     writer.writeheader()
