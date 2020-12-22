@@ -10,7 +10,7 @@ class Credential(object):
     def passwd(self):
         return self._passwd
     @classmethod
-    def from_csv(self, file_name = "nord.csv"):
+    def from_csv(self, file_name = "spotify.csv"):
         creds = []
         cred_objects = []
         with open(file_name, "r") as login_csv:
